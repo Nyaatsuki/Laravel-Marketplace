@@ -13,7 +13,6 @@ class SessionsController extends Controller
     {
         # Getting the blade view for the login page
         return view ('sessions.create');
-
     }
 
     public function register()
@@ -31,7 +30,6 @@ class SessionsController extends Controller
         Auth::login($user);
 
         return redirect('/')->with('success', 'Your account has been created!');
-
     }
 
     public function store()
@@ -51,7 +49,6 @@ class SessionsController extends Controller
         session()->regenerate();
 
         return redirect('/')->with('success', 'Welcome back, ' . Auth::user()->name . '!');
-
     }
 
     public function destroy()
@@ -60,6 +57,5 @@ class SessionsController extends Controller
         Auth::logout();
 
         return redirect('/')->with('success', 'Goodbye!');
-
     }
 }
