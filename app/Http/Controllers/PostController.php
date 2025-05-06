@@ -9,4 +9,8 @@ class PostController extends Controller
     public function create(){
         return view("advertisements.create");
     }
+
+    public function store(){
+        
+    }
 }
