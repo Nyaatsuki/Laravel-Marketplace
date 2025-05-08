@@ -90,7 +90,7 @@ body {
     border-radius: 3px;
 }
 
-.register-form {
+.register-form, .advertisement-form {
     display: flex;
     background-color: var(--off-white);
     border-radius: 15px;
@@ -99,8 +99,8 @@ body {
     padding-bottom: 25px;
 }
 
-.register-form div {
-    margin: 0px 15px;
+.register-form div, .advertisement-form div {
+    margin: 10px 15px;
 }
 
 .register-form button {
