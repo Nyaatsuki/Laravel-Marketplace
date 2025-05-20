@@ -17,7 +17,6 @@
                     <img src="https://static-00.iconduck.com/assets.00/file-upload-icon-1708x2048-tmbrin9e.png">  Custom Upload
                 </label>
                 <input type="file" id="image" name="image"><br>
-                <br>
             </form>
         </div>
     </section>

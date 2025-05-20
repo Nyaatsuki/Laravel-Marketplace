@@ -11,6 +11,6 @@ class PostController extends Controller
     }
 
     public function store(){
-        
+        // it has to do the thing
     }
 }
