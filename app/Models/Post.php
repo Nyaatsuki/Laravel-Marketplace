@@ -2,9 +2,20 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    //
+    use HasFactory;
+
+    protected $fillable = ['title', 'excerpt', 'body', 'user_id', 'category_id', 'slug', 'published_at', 'image', 'premium_content'];
+
+    protected $with = ['category', 'author'];
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
 }
