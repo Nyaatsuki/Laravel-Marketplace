@@ -1,8 +1,11 @@
 :root {
-    --pink-gradient: linear-gradient(90deg,rgba(192, 0, 222, 1) 0%, rgba(255, 0, 94, 1) 100%);
+    --pink-gradient: linear-gradient(90deg,#c000de 0%, #ff005e 100%);
     --old-blue: #116db4;
     --old-blue-hover: #0782ce;
     --off-white: #eaeaea;
+    --concrete-sadness: #7a7a7a;
+    --graphite: #4d4d4d;
+    --tohka: #ff80b0;
 
 }
 
@@ -20,8 +23,8 @@ body {
 }
 
 .flashSuccess span {
-    background: white;
-    border: 2px #ff80b0 solid;
+    background: #fff;
+    border: 2px var(--tohka) solid;
     border-radius: 15px;
     padding: 3px 5px;
 }
@@ -50,7 +53,7 @@ body {
 }
 
 .logo{
-    background: black;
+    background: #000;
     color: #fff;
     width: 25px;
     height: 25px;
@@ -94,6 +97,7 @@ body {
     display: flex;
     background-color: var(--off-white);
     border-radius: 15px;
+    border: 1px var(--tohka) solid;
     width: fit-content;
     margin: 150px auto;
     padding-bottom: 25px;
@@ -111,10 +115,15 @@ input[type="file"] {
     display: none;
 }
 
+input {
+    border: 1px solid var(--concrete-sadness);;
+    border-radius: 7px;
+}
+
 .custom-file-upload {
-    border: 1px dotted #7a7a7a;
+    border: 1px dotted var(--concrete-sadness);
     border-radius: 10px;
-    color: #7a7a7a;
+    color: var(--concrete-sadness);
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
@@ -122,8 +131,8 @@ input[type="file"] {
 }
 
 .custom-file-upload:hover {
-    border-color: #4d4d4d;
-    color: #4d4d4d
+    border-color: var(--graphite);
+    color: var(--graphite)
 }
 
 .custom-file-upload img {
