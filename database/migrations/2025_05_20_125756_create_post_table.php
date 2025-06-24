@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title')->unique();
             $table->string('image')->nullable();
             $table->text('body');
+            $table->integer('price');
             $table->timestamps();
         });
     }

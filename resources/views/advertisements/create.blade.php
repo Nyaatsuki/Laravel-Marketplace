@@ -1,7 +1,7 @@
 <x-layout>
     <section class="advertisement-form">
         <div>
-            <form method="POST" action="/register">
+            <form method="POST" action="/store">
                 @csrf
 
                 <label for="name">Title</label><br>
@@ -13,10 +13,9 @@
                 <label for="price">Price</label><br>
                 <input type="text" id="price" name="price" value="{{ old('price') }}"><br>
                 <br>
-                <label for="file-upload" class="custom-file-upload">
-                    <img src="https://static-00.iconduck.com/assets.00/file-upload-icon-1708x2048-tmbrin9e.png">  Custom Upload
-                </label>
                 <input type="file" id="image" name="image"><br>
+
+                <button type="submit">Submit</button>
             </form>
         </div>
     </section>

@@ -18,3 +18,4 @@ Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 Route::get('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
 route::get('post', [PostController::class, 'create'])->middleware('auth');
+route::post('post', [PostController::class, 'store'])->middleware('auth');
