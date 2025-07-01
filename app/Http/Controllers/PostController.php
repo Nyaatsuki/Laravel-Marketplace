@@ -20,7 +20,7 @@ class PostController extends Controller
             'price' =>['required'],
         ]);
 
-        return dd($attributes);
+        return redirect("/");
 
     }
 }
