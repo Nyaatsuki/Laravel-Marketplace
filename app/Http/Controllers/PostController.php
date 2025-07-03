@@ -14,13 +14,13 @@ class PostController extends Controller
         // SHIT I NEED TO PUSH TO THE DB LIKE THE DUMB BITCH I AM: Ad Title, Ad Description, Ad price, Ad image
         // Grab the info from the inputs and store them in the database, then show them on the main page
          $attributes = request()->validate([
-            'body' => ['required'],
             'title' => ['required'],
-            'image' => ['required', 'image', 'mimes:jpeg,jpg,png', 'max:50000'],
+            'description' => ['required'],
+            'image' => ['required', 'image', 'mimes:jpg,jpeg,png,gif', 'max:1000'],
             'price' =>['required'],
         ]);
 
-        return redirect("/");
+        dd($attributes);
 
     }
 }

@@ -1,11 +1,11 @@
 <x-layout>
     <section class="advertisement-form">
         <div>
-            <form method="POST" action="post/store">
+            <form method="POST" action="/create-post" enctype="multipart/form-data">
                 @csrf
 
                 <label for="name">Title</label><br>
-                <input type="text" id="name" name="name" value="{{ old('name') }}"><br>
+                <input type="text" id="title" name="title" value="{{ old('title') }}"><br>
                 @error('name')
                 <p style="color:red; font-size:12px;">{{ $message }}</p>
                 @enderror
@@ -23,7 +23,7 @@
                 @enderror
                 <br>
                 <input type="file" id="image" name="image"><br>
-                @error('file')
+                @error('image')
                 <p style="color:red; font-size:12px;">{{ $message }}</p>
                 @enderror
 
