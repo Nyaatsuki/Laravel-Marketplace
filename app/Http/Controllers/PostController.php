@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\support\Facades\Auth;
-use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function index(){
+        return view('index', [
+            'posts' => Post::orderBy('created_at', 'desc')->get()
+        ]);
+    }
+
     public function create(){
         return view("advertisements.create");
     }
