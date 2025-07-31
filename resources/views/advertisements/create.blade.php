@@ -17,7 +17,7 @@
                 @enderror
                 <br>
                 <label for="price">Price</label><br>
-                <input id="price" name="price" type="number" value="{{ old('price') }}"><br>
+                <input id="price" name="price" type="number" value="{{ old('price') }}" step="0.1"><br>
                 @error('price')
                 <p style="color:red; font-size:12px;">{{ $message }}</p>
                 @enderror

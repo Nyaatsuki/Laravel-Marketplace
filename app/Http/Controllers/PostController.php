@@ -55,5 +55,6 @@ class PostController extends Controller
             'price' => request()->input('price')
         ]);
 
+        return redirect('/');
     }
 }

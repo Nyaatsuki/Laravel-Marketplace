@@ -153,9 +153,12 @@ input {
 .show-container {
     margin: auto;
     display: table;
+    margin-top: 50px;
+    width: 500px
 }
 
 .small-img {
     box-shadow: var(--Imirs-Shadow) -3px 5px;
     border-radius: 20px;
+    max-height: 260px;
 }

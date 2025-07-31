@@ -8,7 +8,7 @@ Route::get('welcome', function () {
     return view('welcome');
 });
 
-Route::get('/', [PostController::class, 'index']);
+Route::get('/', [PostController::class, 'index'])->name('home');
 
 route::get('post', [PostController::class, 'create'])->middleware('auth');
 Route::get('advertisement/{post:slug}', [PostController::class, 'show']);
