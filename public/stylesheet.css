@@ -1,12 +1,12 @@
 :root {
-    --pink-gradient: linear-gradient(90deg,#c000de 0%, #ff005e 100%);
+    --pink-gradient: linear-gradient(90deg, #c000de 0%, #ff005e 100%);
     --old-blue: #116db4;
     --old-blue-hover: #0782ce;
     --off-white: #eaeaea;
     --concrete-sadness: #7a7a7a;
     --graphite: #4d4d4d;
     --tohka: #ff80b0;
-
+    --Imirs-Shadow: #80808057
 }
 
 body {
@@ -19,7 +19,7 @@ body {
     text-align: center;
     width: 100%;
     transition: .3s;
-    padding-top: 60px;
+    top: 60px;
 }
 
 .flashSuccess span {
@@ -30,11 +30,11 @@ body {
 }
 
 
-.header{
+.header {
     width: 100%;
 }
 
-.color-bar{
+.color-bar {
     background: var(--pink-gradient);
     width: 100%;
     height: 5px;
@@ -42,24 +42,24 @@ body {
 
     position: absolute;
     top: 0;
-     left: 0;
+    left: 0;
 
 }
 
-.nav-bar{
+.nav-bar {
     display: flex;
     justify-content: center;
     padding-top: 15px;
 }
 
-.logo{
+.logo {
     background: #000;
     color: #fff;
     width: 25px;
     height: 25px;
     text-align: center;
     border-radius: 100%;
-    font-weight:600;
+    font-weight: 600;
     line-height: 25px;
     font-size: 22px;
     display: inline-block;
@@ -80,7 +80,7 @@ body {
     border-color: var(--old-blue-hover) !important;
 }
 
-.nav-bar a{
+.nav-bar a {
     text-decoration: none;
     color: var(--old-blue);
     transition-duration: 0.5s;
@@ -93,7 +93,8 @@ body {
     border-radius: 3px;
 }
 
-.register-form, .advertisement-form {
+.register-form,
+.advertisement-form {
     display: flex;
     background-color: var(--off-white);
     border-radius: 15px;
@@ -103,14 +104,58 @@ body {
     padding-bottom: 25px;
 }
 
-.register-form div, .advertisement-form div {
+.register-form div,
+.advertisement-form div {
     margin: 10px 15px;
 }
 
 .register-form button {
     margin-top: 5px
 }
+
 input {
-    border: 1px solid var(--concrete-sadness);;
+    border: 1px solid var(--concrete-sadness);
+    ;
     border-radius: 7px;
+}
+
+.content {
+    max-width: fit-content;
+    margin: 50px auto;
+}
+
+.layout-boxes {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-gap: 10px;
+}
+
+.grid-col-2 {
+    grid-column: span 2;
+    border: 2px solid transparent;
+    border-radius: 5%;
+    box-shadow: var(--Imirs-Shadow) -3px 4px;
+    background: linear-gradient(#fff 0 0) padding-box, var(--pink-gradient) border-box;
+}
+
+.grid-col-3 {
+    grid-column: span 3;
+    border: 2px solid transparent;
+    border-radius: 5%;
+    box-shadow: var(--Imirs-Shadow) -3px 4px;
+    background: linear-gradient(#fff 0 0) padding-box, var(--pink-gradient) border-box;
+}
+
+.post-container {
+    padding: 5px 10px;
+}
+
+.show-container {
+    margin: auto;
+    display: table;
+}
+
+.small-img {
+    box-shadow: var(--Imirs-Shadow) -3px 5px;
+    border-radius: 20px;
 }

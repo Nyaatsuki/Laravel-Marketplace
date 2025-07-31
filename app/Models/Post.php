@@ -11,11 +11,14 @@ class Post extends Model
 
     protected $fillable = ['title', 'excerpt', 'body', 'user_id', 'category_id', 'slug', 'published_at', 'image', 'price'];
 
-    //protected $with = ['category', 'author'];
-
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function categories()
+    {
+        return $this->belongsTo(category::class);
     }
 
 }
