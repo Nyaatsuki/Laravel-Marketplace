@@ -18,3 +18,7 @@ Route::get('login', [SessionsController::class, 'create'])->middleware('guest')-
 Route::post('register', [SessionsController::class, 'register'])->middleware('guest');
 Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 Route::get('logout', [SessionsController::class, 'destroy'])->middleware('auth');
+
+route::get('category/{category:slug}', function () {
+    return view('welcome');
+});

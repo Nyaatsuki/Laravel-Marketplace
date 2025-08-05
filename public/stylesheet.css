@@ -124,6 +124,9 @@ input {
     margin: 50px auto;
 }
 
+
+/*TODO: replace width with proper grid alignment*/
+
 .layout-boxes {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -162,4 +165,12 @@ input {
     box-shadow: var(--Imirs-Shadow) -3px 5px;
     border-radius: 20px;
     max-height: 260px;
+}
+
+.category-tag {
+    border: 1px solid #000;
+    border-radius: 10%;
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 10px;
 }
