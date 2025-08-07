@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index(){
         return view('index', [
-            'posts' => Post::orderBy('created_at', 'desc')->get()
+            'posts' => Post::orderBy('created_at', 'desc')->filter(request(['category']))->get()
         ]);
     }
 

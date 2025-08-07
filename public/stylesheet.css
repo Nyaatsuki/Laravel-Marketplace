@@ -170,7 +170,15 @@ input {
 .category-tag {
     border: 1px solid #000;
     border-radius: 10%;
+    display: block;
     width: fit-content;
-    height: fit-content;
     padding: 0px 10px;
+    text-decoration: none;
+    transition: .3s;
+    color: #000
+}
+
+.category-tag:hover {
+    border-color: var(--concrete-sadness);
+    color: var(--concrete-sadness)
 }
