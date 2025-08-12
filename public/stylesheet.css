@@ -164,7 +164,8 @@ input {
 .small-img {
     box-shadow: var(--Imirs-Shadow) -3px 5px;
     border-radius: 20px;
-    max-height: 260px;
+    width: -moz-available;
+    width: -webkit-fill-available;
 }
 
 .category-tag {
@@ -181,4 +182,12 @@ input {
 .category-tag:hover {
     border-color: var(--concrete-sadness);
     color: var(--concrete-sadness)
+}
+
+.cat-drop {
+    border: 1px solid var(--concrete-sadness);
+  border-radius: 7px;
+  background: #fff;
+  width: 161px;
+  height: 20px;
 }

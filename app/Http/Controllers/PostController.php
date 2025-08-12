@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\categories;
 use App\Models\Post;
 use Illuminate\support\Facades\Auth;
 
@@ -14,7 +15,8 @@ class PostController extends Controller
     }
 
     public function create(){
-        return view("advertisements.create");
+        $categories = categories::all();
+        return view('advertisements.create', ['categories' => $categories]);
     }
 
     public function show(Post $post)
@@ -39,6 +41,7 @@ class PostController extends Controller
             'description' => ['required'],
             'image' => ['required', 'image', 'mimes:jpg,jpeg,png,gif', 'max:1000'],
             'price' =>['required', 'decimal:2'],
+            'categories' => ['required']
         ]);
 
         //dd($attributes);
@@ -49,6 +52,7 @@ class PostController extends Controller
         Post::create([
             'slug' => random_int(1000000000000, 9999999999999),
             'user_id' => $user,
+            'category_id' => request()->input('categories'),
             'title' => request()->input('title'),
             'body' => $body,
             'image' => '/img/' . $imageName,

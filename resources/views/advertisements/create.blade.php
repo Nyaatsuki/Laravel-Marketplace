@@ -4,9 +4,22 @@
             <form method="POST" action="/create-post" enctype="multipart/form-data">
                 @csrf
 
-                <label for="name">Title</label><br>
+                <label for="title">Title</label><br>
                 <input type="text" id="title" name="title" value="{{ old('title') }}"><br>
-                @error('name')
+                @error('title')
+                <p style="color:red; font-size:12px;">{{ $message }}</p>
+                @enderror
+                <br>
+                <label for="categories">Categories</label><br>
+                <select name="categories" class="cat-drop" id="categories">
+                    @foreach ($categories->all() as $category)
+                    @if ($category == 'product')
+                    <option value="{{ $category->id }}" id="categories" name="categories" selected>{{$category->name}}</option>
+                    @endif
+                    <option value="{{ $category->id }}" id="categories" name="categories">{{$category->name}}</option>
+                    @endforeach
+                </select><br>
+                @error('categories')
                 <p style="color:red; font-size:12px;">{{ $message }}</p>
                 @enderror
                 <br>
@@ -17,7 +30,7 @@
                 @enderror
                 <br>
                 <label for="price">Price</label><br>
-                <input id="price" name="price" type="number" value="{{ old('price') }}" step="0.1"><br>
+                <input id="price" name="price" type="number" value="{{ old('price') }}" step="0.01"><br>
                 @error('price')
                 <p style="color:red; font-size:12px;">{{ $message }}</p>
                 @enderror
