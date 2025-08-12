@@ -164,8 +164,8 @@ input {
 .small-img {
     box-shadow: var(--Imirs-Shadow) -3px 5px;
     border-radius: 20px;
-    width: -moz-available;
-    width: -webkit-fill-available;
+    width: 100%;
+    width: auto;
 }
 
 .category-tag {
