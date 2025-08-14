@@ -168,7 +168,7 @@ input {
 
 .category-tag {
     border: 1px solid #000;
-    border-radius: 10%;
+    border-radius: 10px;
     display: block;
     width: fit-content;
     padding: 0px 10px;
