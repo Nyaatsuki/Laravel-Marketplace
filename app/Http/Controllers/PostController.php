@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\categories;
+use App\Models\Categories;
 use App\Models\Post;
 use Illuminate\support\Facades\Auth;
 
@@ -30,16 +30,13 @@ class PostController extends Controller
         
         $user = Auth::user()->id;
 
-        // SHIT I NEED TO PUSH TO THE DB LIKE THE DUMB BITCH I AM: Ad Title, Ad Description, Ad price, Ad image
-        // Grab the info from the inputs and store them in the database, then show them on the main page
-
         $body = preg_split('/\r\n|\r|\n/', request()->input('description'));
         $body = '<p>' . implode('</p><p>', $body) . '</p>';
 
          $attributes = request()->validate([
             'title' => ['required'],
             'description' => ['required'],
-            'image' => ['required', 'image', 'mimes:jpg,jpeg,png,gif', 'max:1000'],
+            'image' => ['required', 'image', 'mimes:jpg,jpeg,png,gif,webp', 'max:1000'],
             'price' =>['required', 'decimal:2'],
             'categories' => ['required']
         ]);

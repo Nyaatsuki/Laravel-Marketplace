@@ -6,7 +6,7 @@
     --concrete-sadness: #7a7a7a;
     --graphite: #4d4d4d;
     --tohka: #ff80b0;
-    --Imirs-Shadow: #80808057
+    --imirs-shadow: #80808057
 }
 
 body {
@@ -28,7 +28,6 @@ body {
     border-radius: 15px;
     padding: 3px 5px;
 }
-
 
 .header {
     width: 100%;
@@ -124,7 +123,6 @@ input {
     margin: 50px auto;
 }
 
-
 /*TODO: replace width with proper grid alignment*/
 
 .layout-boxes {
@@ -138,7 +136,7 @@ input {
     grid-column: span 2;
     border: 2px solid transparent;
     border-radius: 5%;
-    box-shadow: var(--Imirs-Shadow) -3px 4px;
+    box-shadow: var(--imirs-shadow) -3px 4px;
     background: linear-gradient(#fff 0 0) padding-box, var(--pink-gradient) border-box;
 }
 
@@ -146,7 +144,7 @@ input {
     grid-column: span 3;
     border: 2px solid transparent;
     border-radius: 5%;
-    box-shadow: var(--Imirs-Shadow) -3px 4px;
+    box-shadow: var(--imirs-shadow) -3px 4px;
     background: linear-gradient(#fff 0 0) padding-box, var(--pink-gradient) border-box;
 }
 
@@ -162,10 +160,10 @@ input {
 }
 
 .small-img {
-    box-shadow: var(--Imirs-Shadow) -3px 5px;
+    box-shadow: var(--imirs-shadow) -3px 5px;
     border-radius: 20px;
-    width: 100%;
-    width: auto;
+    width: -moz-available;
+    width: -webkit-fill-available;
 }
 
 .category-tag {
