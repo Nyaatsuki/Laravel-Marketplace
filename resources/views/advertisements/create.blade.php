@@ -12,7 +12,7 @@
                 <br>
 
                 <label for="categories">Categories</label><br>
-                <select name="categories" class="cat-drop" id="categories">
+                <select name="categories" class="category-dropdown" id="categories">
                     @foreach ($categories->all() as $category)
                     @if ($category == 'product')
                     <option value="{{ $category->id }}" id="categories" name="categories" selected>{{$category->name}}</option>
