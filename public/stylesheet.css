@@ -159,6 +159,10 @@ input {
     width: 500px
 }
 
+.user-name {
+    font-weight: normal;
+}
+
 .small-img {
     box-shadow: var(--imirs-shadow) -3px 5px;
     border-radius: 20px;

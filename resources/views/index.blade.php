@@ -8,6 +8,7 @@
                         <h3>{{$post->title}}</h3>
                         <!--<span>published <time>{{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</time></span>-->
                     </div>
+                    <h5 class="user-name">Posted by: {{$post->author->name }}</h5>
                     <a href="/?category={{ $post->category->slug }}&{{ http_build_query(request()->except('category')) }}" class="category-tag">{{$post->category->name}}</a>
                     <div class="container-excerpt">
                         {!! $post->body !!}

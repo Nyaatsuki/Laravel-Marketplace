@@ -21,14 +21,14 @@
         @endauth
         &nbsp;
         &nbsp;
+        @auth
         |
         &nbsp;
         &nbsp;
-        @auth
         <a href="/?author={{ auth()->user()->username }}">Your Advertisements</a>
+        &nbsp;
+        &nbsp;
         @endauth
-        &nbsp;
-        &nbsp;
         |
         &nbsp;
         &nbsp;
