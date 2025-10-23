@@ -10,7 +10,7 @@ class AdvertisementController extends Controller
 {
     public function index(){
         return view('index', [
-            'posts' => Advertisement::orderBy('created_at', 'desc')->filter(request(['category', 'author']))->get()
+            'advertisements' => Advertisement::orderBy('created_at', 'desc')->filter(request(['category', 'author']))->get()
         ]);
     }
 
@@ -19,10 +19,10 @@ class AdvertisementController extends Controller
         return view('advertisements.create', ['categories' => $categories]);
     }
 
-    public function show(Post $post)
+    public function show(Advertisement $advertisement)
     {
         return view('show', [
-            'post' => $post
+            'advertisement' => $advertisement
         ]);
     }
 
@@ -46,7 +46,7 @@ class AdvertisementController extends Controller
         $imageName = time() . '.' . request()->image->extension();
         request()->image->move(public_path('img'), $imageName);
 
-        Post::create([
+        Advertisement::create([
             'slug' => random_int(1000000000000, 9999999999999),
             'user_id' => $user,
             'category_id' => request()->input('categories'),
