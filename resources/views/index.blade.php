@@ -6,14 +6,9 @@
                 <article class="post-container">
                     <div class="container-title">
                         <h3>{{$post->title}}</h3>
-<<<<<<< HEAD
                         <!--<span>published <time>{{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</time></span>-->
                     </div>
                     <h5 class="user-name">Posted by: {{$post->author->name }}</h5>
-=======
-                        <!--<span>published <time>{{ \Carbon\Carbon::parse($post->published_at)->diffForHumans() }}</time></span>-->
-                    </div>
->>>>>>> 39f9422fa52e95bf54b2e8cb3196b00a1178dc8d
                     <a href="/?category={{ $post->category->slug }}&{{ http_build_query(request()->except('category')) }}" class="category-tag">{{$post->category->name}}</a>
                     <div class="container-excerpt">
                         {!! $post->body !!}
