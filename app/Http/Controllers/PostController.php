@@ -58,4 +58,12 @@ class PostController extends Controller
 
         return redirect('/');
     }
+
+    public function edit(){
+        //TODO: write Edit form code
+    }
+
+    public function update(){
+        //TODO: Write update function
+    }
 }
