@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categories;
-use App\Models\Post;
+use App\Models\Advertisement;
 use Illuminate\support\Facades\Auth;
 
-class PostController extends Controller
+class AdvertisementController extends Controller
 {
     public function index(){
         return view('index', [
-            'posts' => Post::orderBy('created_at', 'desc')->filter(request(['category', 'author']))->get()
+            'posts' => Advertisement::orderBy('created_at', 'desc')->filter(request(['category', 'author']))->get()
         ]);
     }
 
