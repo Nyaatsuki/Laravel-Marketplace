@@ -8,7 +8,7 @@
                         <h3>{{$advertisement->title}}</h3>
                         <!--<span>published <time>{{ \Carbon\Carbon::parse($advertisement->created_at)->diffForHumans() }}</time></span>-->
                     </div>
-                    <h5 class="user-name">Posted by: {{$advertisement->author->name }}</h5>
+                    <h5 class="user-name">Posted by: {{ $advertisement->author->name }}</h5>
                     <a href="/?category={{ $advertisement->category->slug }}&{{ http_build_query(request()->except('category')) }}" class="category-tag">{{$advertisement->category->name}}</a>
                     <div class="container-excerpt">
                         {!! $advertisement->body !!}

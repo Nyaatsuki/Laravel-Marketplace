@@ -14,7 +14,6 @@ route::get('post', [AdvertisementController::class, 'create'])->middleware('auth
 Route::get('advertisement/{post:slug}', [AdvertisementController::class, 'show']);
 route::post('create-post', [AdvertisementController::class, 'store'])->middleware('auth');
 
-
 Route::get('posts/{post:slug}/edit', [AdvertisementController::class, 'edit'])->middleware('auth');
 Route::put('posts/{post:slug}/edit', [AdvertisementController::class, 'update'])->middleware('auth');
 
