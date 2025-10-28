@@ -222,3 +222,7 @@ input {
 .edit-btn a:hover {
     filter: brightness(110%);
 }
+
+.del-btn {
+    margin-top: 10px;
+}

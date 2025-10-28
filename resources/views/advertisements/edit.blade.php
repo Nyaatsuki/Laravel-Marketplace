@@ -41,6 +41,11 @@
                 
                 <button type="submit">Save</button>
             </form>
+            <form action="/advertisement/{{$advertisement->slug}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="del-btn" value="Delete">Delete</button>
+            </form>
         </div>
     </section>
 </x-layout>

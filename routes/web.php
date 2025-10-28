@@ -17,6 +17,8 @@ route::post('create-post', [AdvertisementController::class, 'store'])->middlewar
 Route::get('advertisement/{advertisement:slug}/edit', [AdvertisementController::class, 'edit'])->middleware('auth');
 Route::put('advertisement/{advertisement:slug}/edit', [AdvertisementController::class, 'update'])->middleware('auth');
 
+Route::delete('advertisement/{advertisement:slug}', [AdvertisementController::class, 'destroy'])->middleware('auth');
+
 Route::get('login', [SessionsController::class, 'create'])->middleware('guest')->name("login");
 Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 
