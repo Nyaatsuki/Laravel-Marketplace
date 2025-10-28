@@ -194,8 +194,31 @@ input {
 
 .category-dropdown {
     border: 1px solid var(--concrete-sadness);
-  border-radius: 7px;
-  background: #fff;
-  width: 161px;
-  height: 20px;
+    border-radius: 7px;
+    background: #fff;
+    width: 161px;
+    height: 20px;
+}
+
+.edit-btn {
+    position: relative;
+    display: block;
+    left: 95%;
+    height: auto;
+    width: auto;
+}
+
+.edit-btn a {
+    border-radius: 100%;
+    background: var(--tohka);
+    padding: 5px;
+    color: black;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.edit-btn a:hover {
+    filter: brightness(110%);
 }

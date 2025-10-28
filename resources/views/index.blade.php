@@ -4,6 +4,13 @@
             @Foreach ($advertisements as $advertisement)
             <div class="{{$loop->iteration < 3 ? 'grid-col-3' : 'grid-col-2'}}">
                 <article class="post-container">
+                    @auth
+                            @if(auth()->user()->username == $advertisement->author->username)
+                                <div class="edit-btn">
+                                    <a href="advertisement/{{$advertisement->slug}}/edit">&#x1F589;</a>
+                                </div>
+                            @endif
+                        @endauth
                     <div class="container-title">
                         <h3>{{$advertisement->title}}</h3>
                         <!--<span>published <time>{{ \Carbon\Carbon::parse($advertisement->created_at)->diffForHumans() }}</time></span>-->

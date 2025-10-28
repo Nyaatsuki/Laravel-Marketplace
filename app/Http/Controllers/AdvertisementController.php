@@ -59,8 +59,11 @@ class AdvertisementController extends Controller
         return redirect('/');
     }
 
-    public function edit(){
-        //TODO: write Edit form code
+    public function edit(Advertisement $advertisement){
+        $categories = categories::all();
+        $body = str_replace('</p><p></p><p>', "\r\n\r\n", $advertisement->body);
+
+        return view('advertisements.edit', ['categories' => $categories, 'advertisement' => $advertisement, 'body' => $body]);
     }
 
     public function update(){
