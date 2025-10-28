@@ -66,7 +66,22 @@ class AdvertisementController extends Controller
         return view('advertisements.edit', ['categories' => $categories, 'advertisement' => $advertisement, 'body' => $body]);
     }
 
-    public function update(){
-        //TODO: Write update function
+    public function update(Advertisement $advertisement){
+        $body = preg_split('/\r\n|\r|\n/', request()->input('description'));
+        $body = '<p>' . implode('</p><p>', $body) . '</p>';
+
+         $attributes = request()->validate([
+            'title' => ['required'],
+            'description' => ['required'],
+            'price' =>['required', 'decimal:2'],
+        ]);
+
+        $advertisement->update([
+            'title' => request()->input('title'),
+            'body' => $body,
+            'price' => request()->input('price')
+        ], $attributes);
+
+        return redirect('/');
     }
 }
