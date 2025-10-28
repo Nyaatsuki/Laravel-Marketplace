@@ -11,11 +11,11 @@ Route::get('welcome', function () {
 Route::get('/', [AdvertisementController::class, 'index'])->name('home');
 
 route::get('post', [AdvertisementController::class, 'create'])->middleware('auth');
-Route::get('advertisement/{post:slug}', [AdvertisementController::class, 'show']);
+Route::get('advertisement/{advertisement:slug}', [AdvertisementController::class, 'show']);
 route::post('create-post', [AdvertisementController::class, 'store'])->middleware('auth');
 
-Route::get('posts/{post:slug}/edit', [AdvertisementController::class, 'edit'])->middleware('auth');
-Route::put('posts/{post:slug}/edit', [AdvertisementController::class, 'update'])->middleware('auth');
+Route::get('advertisement/{advertisement:slug}/edit', [AdvertisementController::class, 'edit'])->middleware('auth');
+Route::put('advertisement/{advertisement:slug}/edit', [AdvertisementController::class, 'update'])->middleware('auth');
 
 Route::get('login', [SessionsController::class, 'create'])->middleware('guest')->name("login");
 Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
