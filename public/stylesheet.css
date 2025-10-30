@@ -212,7 +212,7 @@ input {
 .edit-btn a {
     border-radius: 100%;
     background: var(--tohka);
-    padding: 5px;
+    padding: 5px 7px;
     color: black;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     font-size: 20px;
