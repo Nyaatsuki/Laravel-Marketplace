@@ -10,7 +10,7 @@ class AdvertisementController extends Controller
 {
     public function index(){
         return view('index', [
-            'advertisements' => Advertisement::orderBy('created_at', 'desc')->filter(request(['category', 'author']))->get()
+            'advertisements' => Advertisement::orderBy('created_at', 'desc')->filter(request(['category', 'author']))->paginate(11)
         ]);
     }
 
@@ -63,7 +63,11 @@ class AdvertisementController extends Controller
         $categories = categories::all();
         $body = str_replace('</p><p></p><p>', "\r\n\r\n", $advertisement->body);
 
-        return view('advertisements.edit', ['categories' => $categories, 'advertisement' => $advertisement, 'body' => $body]);
+        if(Auth::user()->username == $advertisement->author->username){
+            return view('advertisements.edit', ['categories' => $categories, 'advertisement' => $advertisement, 'body' => $body]);
+        } else {
+            return redirect('/');
+        }
     }
 
     public function update(Advertisement $advertisement){

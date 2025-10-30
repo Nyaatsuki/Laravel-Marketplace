@@ -27,5 +27,6 @@
             </div>
             @endforeach
         </div>
+        <div class="pagesDiv">{{ $advertisements->links('pagination::simple-bootstrap-5') }}
     </div>
 </x-layout>
