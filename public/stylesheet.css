@@ -114,7 +114,6 @@ body {
 
 input {
     border: 1px solid var(--concrete-sadness);
-    ;
     border-radius: 7px;
 }
 
@@ -122,8 +121,6 @@ input {
     max-width: fit-content;
     margin: 50px auto;
 }
-
-/*TODO: replace width with proper grid alignment*/
 
 .layout-boxes {
     display: grid;

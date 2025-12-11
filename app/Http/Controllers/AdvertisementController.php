@@ -10,7 +10,7 @@ class AdvertisementController extends Controller
 {
     public function index(){
         return view('index', [
-            'advertisements' => Advertisement::orderBy('created_at', 'desc')->filter(request(['category', 'author']))->paginate(11)
+            'advertisements' => Advertisement::orderBy('created_at', 'desc')->filter(request(['category', 'author']))->paginate(8)
         ]);
     }
 
